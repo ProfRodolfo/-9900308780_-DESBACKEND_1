@@ -29,8 +29,10 @@ rl.question(chalk.blue(`Digite a primeira nota: `), (nota1) => {
         const media = (parseFloat(nota1) + parseFloat(nota2)) / 2;
         console.log(chalk.blueBright(`A media das notas eh: ${media.toFixed(2)}`));
         if (media >= 7) {
-            console.log(chalk.bgYellow("Aprovado"));
-        }else{
+            console.log(chalk.bgGreen("Aprovado"));
+        } else if  (media < 7 && media >= 4) {
+            console.log(chalk.bgYellow("Recuperação"));
+        }else {
             console.log(chalk.bgRed("Reprovado"));
         }
         rl.close();
