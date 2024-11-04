@@ -1,0 +1,21 @@
+{
+  "name": "bcsenac",
+  "version": "1.0.0",
+  "description": "Esse projeto console do caixa eletrônico do Banco SENAC",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "Banco;",
+    "SENAC;",
+    "NODEJS"
+  ],
+  "author": "Rodolfo G",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "4.1.2",
+    "inquirer": "8.1.2"
+  }
+}
