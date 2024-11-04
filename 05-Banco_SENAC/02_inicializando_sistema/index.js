@@ -1,8 +1,11 @@
 const inquirer = require('inquirer')
 const chalk = require('chalk')
+
 const fs = require('fs')
-console.log(chalk.bgGreen("Bem vindo ao Banco Senac!"));
-function operation () {
+
+operation()
+
+function operation() {
     inquirer
         .prompt([
             {
@@ -20,5 +23,21 @@ function operation () {
         ])
         .then()
         .catch((err) => console.log(err))
+
+        .then((answer) => {
+            const action = answer['action']
+
+            if (action === 'Criar conta') {
+                createAccount()
+            } else if (action === 'Depositar') {
+                deposit()
+            } else if (action === 'Consultar Saldo') {
+                getAccountBalance()
+            } else if (action === 'Sacar') {
+                withdraw()
+            } else if (action === 'Sair') {
+                console.log(chalk.bgBlue.black('Obrigado por o Banco SENAC!'))
+                process.exit()
+            }
+        })
 }
-operation();
