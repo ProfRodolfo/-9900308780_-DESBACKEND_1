@@ -181,6 +181,35 @@ function addAmount(accountName, amount) {
   )
 }
 
-function withdraw() { }
 
+function withdraw() {
+  inquirer
+    .prompt([
+      {
+        name: 'accountName',
+        message: 'Qual o nome da sua conta?',
+      },
+    ])
+    .then((answer) => {
+      const accountName = answer['accountName']
+
+      if (!checkAccount(accountName)) {
+        return withdraw()
+      }
+
+      inquirer
+        .prompt([
+          {
+            name: 'amount',
+            message: 'Quanto você deseja sacar?',
+          },
+        ])
+        .then((answer) => {
+          const amount = answer['amount']
+
+          removeAmount(accountName, amount)
+          operation()
+        })
+    })
+}
 function removeAmount() { }
