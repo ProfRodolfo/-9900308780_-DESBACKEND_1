@@ -1,0 +1,72 @@
+body , .eita{
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h2 {
+    font-size: 1.5em;
+    margin: 16px;
+    color: #333;
+}
+
+.card p {
+    margin: 26px;
+    color: #666;
+    line-height: 1.5;
+}
+
+
+
+form input {
+    width: 100%;
+    padding: 8px;
+    margin: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn {
+    width: 100%;
+    padding: 8px;
+    margin: 8px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.title2 {
+    text-align: center;
+    color: #007bff;
+    font-size: 1.5em;
+    margin: 56px;
+}
+
+.imgruim{
+    width : 60%;
+    margin: 0 auto;
+    display: block;
+    border-radius: 8px;
+    
+}
