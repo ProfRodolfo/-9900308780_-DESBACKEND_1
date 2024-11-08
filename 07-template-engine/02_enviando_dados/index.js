@@ -12,9 +12,12 @@ app.get('/', function (req, res) {
     surname: 'Gonçalves',
     age: 38,
   }
-  const work = "Programador"
 
-  res.render('home', { user: user , work })
+  res.render('home', { user: user, auth: true })
 })
+
+app.get('/dashboard', function (req, res) {
+    res.render('dashboard')
+});
 
 app.listen(3000)

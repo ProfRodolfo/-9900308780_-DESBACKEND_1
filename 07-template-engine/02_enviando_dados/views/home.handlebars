@@ -2,4 +2,6 @@
   Olá {{ user.name }} {{ user.surname }},  seja bem-vindo!
 </h1>
 
-<h2>Ele(a) tem {{age}} e trabalha como {{work}}</h2>
+{{#if auth}}
+<p>Você está autenticado no sistema, <a href="/dashboard">clique aqui</a> para acessar a área de membro VIP </p>
+{{/if}}
